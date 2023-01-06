@@ -1,5 +1,6 @@
 # Minikube-Installation
-
+sudo su
+sudo apt update
 ### Installing kubectl
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
@@ -87,3 +88,11 @@ rm -f crictl-$VERSION-linux-amd64.tar.gz
 ```
 minikube start --vm-driver=none
 ```
+sudo sysctl fs.protected_regular=0
+snap install kubectl --classic
+kubectl get nodes
+kubectl create deploy mydeploy --image=nginx:latest
+kubectl get pods
+kubectl get deploy
+kubectl get svc
+kubectl expose deploy mydeploy --type=NodePort --port=80
