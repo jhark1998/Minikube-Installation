@@ -1,3 +1,5 @@
+use this youtube link for reference
+https://www.youtube.com/watch?v=qrM9CpT9wj0&t=340s
 # Minikube-Installation
 sudo su
 sudo apt update
